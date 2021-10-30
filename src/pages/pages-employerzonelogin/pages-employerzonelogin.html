@@ -1,0 +1,51 @@
+<!--
+  Generated template for the PagesEmployerzoneloginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-buttons left>
+      <button ion-button navPop icon-only>
+       <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+     </button>
+     </ion-buttons>
+    <ion-title>TimeBiz Jobs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="white">
+  
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Login</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Username/Email" [(ngModel)]="this.Username" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="this.Password" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            
+          </div>
+          <div text-center padding>
+            <button ion-button (click)="EmployerzoneLogin()" style="background-color: c0392b; color: whitesmoke;border-radius: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"  >
+              Signin</button>
+              <br />
+              <h5>Don't have Login</h5>
+              <button ion-button (click)="RegisterNow()" style="background-color: c0392b; color: whitesmoke;border-radius: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"  >
+                Register Now</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+</ion-content>

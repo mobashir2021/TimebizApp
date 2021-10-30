@@ -1,0 +1,76 @@
+<!--
+  Generated template for the PagesJobseekerzoneregistrePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>TimeBiz Jobs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="white">
+  
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Register</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Company Name" [(ngModel)]="this.Companyname" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Email" [(ngModel)]="this.Email" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            <!-- <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="this.Password" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item> -->
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Website" [(ngModel)]="this.Website" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Phone Number" [(ngModel)]="this.Phoneno" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Address" [(ngModel)]="this.Address" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-select class="item-inner" [(ngModel)] = "this.District" placeholder="Select District" style="text-align:center;">
+                <ion-option value="Alappuzha">Alappuzha</ion-option>
+                <ion-option value="Ernakulam">Ernakulam</ion-option>
+                <ion-option value="Idukki">Idukki</ion-option>
+                <ion-option value="Kannur">Kannur</ion-option>
+                <ion-option value="Kasaragod">Kasaragod</ion-option>
+                <ion-option value="Kollam">Kollam</ion-option>
+                <ion-option value="Kottayam">Kottayam</ion-option>
+                <ion-option value="Kozhikode">Kozhikode</ion-option>
+                <ion-option value="Mallapuram">Mallapuram</ion-option>
+                <ion-option value="Pathanamthitta">Pathanamthitta</ion-option>
+                <ion-option value="Thiruvananthapuram">Thiruvananthapuram</ion-option>
+                <ion-option value="Thrissur">Thrissur</ion-option>
+                <ion-option value="Wayanada">Wayanada</ion-option>
+                
+              </ion-select>
+            </ion-item>
+            
+          </div>
+          <div text-center padding>
+            <button ion-button (click)="JobseekerRegister()" style="background-color: c0392b; color: whitesmoke;border-radius: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"  >
+              Register</button>
+              <br/>
+              <h5>Already a member</h5>
+          <button ion-button (click)="Login()" style="background-color: c0392b; color: whitesmoke;border-radius: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"  >
+            Login</button>
+          </div>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+</ion-content>

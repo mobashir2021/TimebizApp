@@ -1,0 +1,64 @@
+<!--
+  Generated template for the PagesJobsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-buttons left>
+      <button ion-button navPop icon-only>
+       <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+     </button>
+     </ion-buttons>
+    <ion-title>TimeBiz Jobs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item no-lines>
+    <img src="../../assets/imgs/jobs3.png" class="imguser" alt="logo" height="120" width="380"  />
+  </ion-item>
+
+  <ion-label color="danger" style="font-size: 22px;text-align: center;font-family: 'BwNistaExtraBold';">
+    Available Jobs
+  </ion-label>
+
+  <ion-card no-padding color="primary"  style="text-align: center;margin-top: 5px;" *ngFor="let data of this.jobsList"
+  (click)="navigateJobs(data.Jobid)" tappable>
+      <ion-card-header no-padding>
+        <ion-label color="light" style="text-align: right;">{{data.PostedOn}}</ion-label>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label color="danger" style="font-size: 20px;text-align: center;font-family: 'BwNistaExtraBold';margin-top: -10px;">
+          {{data.JobTitle}}
+        </ion-label>
+        <br />
+        <p 
+        style="font-size: 18px;text-align: center;font-family: 'BwNista';margin-top: -5px; color:#f4f4f4;">
+          {{data.Designation}}
+        </p>
+        <br />
+        <p 
+        style="font-size: 15px;text-align: center;font-family: 'BwNista';margin-top: -5px; color:#f4f4f4;">
+          {{data.Description}}
+        </p>
+        <br />
+
+        <p 
+        style="font-size: 15px;text-align: center;font-family: 'BwNistaExtraBold';margin-top: -5px; color:#f4f4f4;">
+          {{data.District}} 
+        </p>
+
+          
+          
+          
+        
+      </ion-card-content>
+    
+    </ion-card>
+</ion-content>
+

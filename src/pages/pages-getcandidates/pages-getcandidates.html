@@ -1,0 +1,86 @@
+<!--
+  Generated template for the PagesJobSeekerListPerjobPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="center">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <!-- <ion-back-button text="" icon="arrow-back" color="warning" defaultHref="partnerhome"></ion-back-button> -->
+    </ion-buttons>
+    <ion-title color="warning">Download Resume</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="center" padding>
+  <div class="divheader">
+    <ion-label class="headercolor">{{Name}}</ion-label><br/>
+    <ion-label class="headercolor">{{Designation}}</ion-label><br/>
+    
+  </div>
+  <ion-grid >
+    <ion-row>
+      <ion-col size="4">
+        <ion-label class="types">
+          Experience
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-label>{{Experience}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col size="4" class="types">
+        <ion-label>
+          Lead Cost
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-label>{{CreditUsed}}</ion-label>
+      </ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col size="4" class="types">
+        <ion-label>
+          Skills
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-label>{{Skills}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="types">
+        <ion-label>
+          Qualification
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-label>{{Qualification}}</ion-label>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+
+  <button (click)="DownloadFile()" ion-button style="background-color: white; color: red;border-radius: 0px;"  >Download Resume</button>
+  <ion-label>
+    <b>{{downloadtext}}</b>
+  </ion-label>
+
+ <!--  <button (click)="DownloadFile()" ion-button style="background-color: white; color: red;border-radius: 0px;"  >Download Resume</button>
+  <ion-label>
+    <b>{{downloadtext}}</b>
+  </ion-label> -->
+
+
+
+  <div class="center">
+    
+    <button (click)="GoToHome()" ion-button style="background-color: white; color: red;border-radius: 0px;"  >Go To Home</button>
+  
+</div>
+
+</ion-content>

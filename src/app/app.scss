@@ -14,3 +14,44 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+ion-icon.menucolor{
+    //color:var(--ion-color-success-shade);
+    color:var(--ion-color-warning);
+    margin-right: 15px;
+}
+ion-item{
+    
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    //color: violet;
+    color:var(--ion-color-tertiary-shade);
+}
+
+ion-toolbar.menutoolbar {
+    min-height: 150px!important;
+  } 
+
+ion-label.aligndata{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    // margin-top: -30px;
+}
+
+img.imguser{
+    margin-left: 10px;
+    margin-right: 7px;
+}
+
+button.btnnavbar{
+    border: 1px solid white;
+    background-color: #C11B17;
+}
+
+

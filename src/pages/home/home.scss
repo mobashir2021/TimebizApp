@@ -1,3 +1,82 @@
-page-home {
-
+.new-background-color{
+    --background: #c0392b;
 }
+
+ion-content.topcontenthome{
+    // background: #dcf8fc;
+    background: #ffffff;
+
+    
+}
+
+ion-label.topdata{
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'BwNistaExtraBold' !important;
+}
+
+button.btnnavbar{
+    //border: 1px solid #B71C1C;
+    background-color: #82CAFA;
+    //background-color: #c0392b;
+    color: white;
+    height: 35px;
+    font-family: 'BwNista';
+}
+
+ion-slides {
+    height: 290px;
+ }
+
+ .myOverlay{
+     text-align: center;
+ }
+
+ ion-grid{
+     --ion-grid-padding: 0;
+     --ion-grid-column-padding: 0;
+     
+ }
+
+ ion-col{
+     --ion-grid-columns: 12;
+ }
+ ion-item {
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    // here other custom CSS from documentation
+  }
+  .item .item-inner {
+    padding-left: 0px;
+    padding-right: 0px!important;
+    
+    
+  }
+
+  .item-inner{
+    max-width: 98% !important;
+  }
+
+
+ion-item.buttonzone{
+    align-items: center;
+    text-align: center;
+}
+.paradesc{
+    margin-top: -3%;
+}
+
+.hpara{
+    color: #5CB3FF;
+    font-family: 'BwNistaExtraBold';
+}
+
+ion-icon.menucolorhome{
+    //color:var(--ion-color-success-shade);
+    color:white;
+    font-size: 35px;
+    
+}
+

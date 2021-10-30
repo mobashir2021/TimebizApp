@@ -1,18 +1,284 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar color="primary">
+    
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-title>TimeBiz Jobs</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="topcontenthome" style="padding: 0px; margin: 0px; margin-top: 10px;" >
+  <!-- <ion-item no-lines class="buttonzone" >
+    
+    <button class="btnnavbar"  ion-button color="light" style=" width: 50%;"  >SEEKER JOB ZONE</button>
+    <button class="btnnavbar"   ion-button color="light" style=" width: 50%;" >EMPLOYER ZONE</button>
+  </ion-item> -->
+  <!-- <img class="imguser" alt="logo" height="110" width="400"   src="../../assets/imgs/jobs7try.jpg" >  -->
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-slides pager autoplay="5000" loop="true" speed="500" slidesPerView="1" >
+    <ion-slide class="slider1" *ngFor="let slide of this.slider" style="height: 220px;">
+      <img [src]="slide.image" class="imguser" alt="logo" height="110" width="380"  />
+      <ion-item no-lines class="myOverlay">
+        <h4 color="primary" class="hpara" [innerHTML]="slide.title"></h4>
+        <p class="paradesc" [innerHTML]="slide.description"></p>
+        <button ion-button color="default" >Ask Our Expert</button>
+      </ion-item>
+    </ion-slide>
+  </ion-slides>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-card color="primary" style="border-radius: 0px; text-align: center;">
+    <ion-card-title style="text-align:center; font-family: 'BwNistaExtraBold';">Search Jobs</ion-card-title>
+    <ion-card-content >
+    <ion-item  >
+      <ion-select [(ngModel)] = "this.searchDistrictWithCat" class="item-inner" placeholder="Select District" style="text-align:center;">
+        <ion-option value="Alappuzha">Alappuzha</ion-option>
+        <ion-option value="Ernakulam">Ernakulam</ion-option>
+        <ion-option value="Idukki">Idukki</ion-option>
+        <ion-option value="Kannur">Kannur</ion-option>
+        <ion-option value="Kasaragod">Kasaragod</ion-option>
+        <ion-option value="Kollam">Kollam</ion-option>
+        <ion-option value="Kottayam">Kottayam</ion-option>
+        <ion-option value="Kozhikode">Kozhikode</ion-option>
+        <ion-option value="Mallapuram">Mallapuram</ion-option>
+        <ion-option value="Pathanamthitta">Pathanamthitta</ion-option>
+        <ion-option value="Thiruvananthapuram">Thiruvananthapuram</ion-option>
+        <ion-option value="Thrissur">Thrissur</ion-option>
+        <ion-option value="Wayanada">Wayanada</ion-option>
+        
+      </ion-select>
+    </ion-item>
+    <ion-item style="margin-top: 7px;">
+      <ion-select [(ngModel)] = "this.searchCatWithDistrict" class="item-inner" placeholder="Select a Job Category" style="text-align:center;">
+        <ion-option value="Chief">Chief</ion-option>
+        <ion-option value="Overseer">Overseer</ion-option>
+        <ion-option value="Marketing">Marketing</ion-option>
+        <ion-option value="Marketing Manager">Marketing Manager</ion-option>
+        <ion-option value="Markerting Specialist">Markerting Specialist</ion-option>
+        <ion-option value="Marketing Director">Marketing Director</ion-option>
+        <ion-option value="Marketing Research Analyst">Marketing Research Analyst</ion-option>
+        <ion-option value="Marketing Communication Manager">Marketing Communication Manager</ion-option>
+        <ion-option value="Marketing Consultant">Marketing Consultant</ion-option>
+        <ion-option value="Product Manager">Product Manager</ion-option>
+        <ion-option value="Public Relation">Public Relation</ion-option>
+        <ion-option value="Social Media Assistant">Social Media Assistant</ion-option>
+        <ion-option value="Brand Manager">Brand Manager</ion-option>
+        <ion-option value="SEO Manager">SEO Manager</ion-option>
+        <ion-option value="Content Marketing Manager">Content Marketing Manager</ion-option>
+        <ion-option value="Copy Writer">Copy Writer</ion-option>
+        <ion-option value="Media Buyer">Media Buyer</ion-option>
+        <ion-option value="Digital Marketing Manager">Digital Marketing Manager</ion-option>
+        <ion-option value="Information Technology">Information Technology</ion-option>
+        <ion-option value="Computer Scientist">Computer Scientist</ion-option>
+        <ion-option value="IT Professional">IT Professional</ion-option>
+        <ion-option value="Marketing Consultant">Marketing Consultant</ion-option>
+        <ion-option value="Product Manager">Product Manager</ion-option>
+        <ion-option value="Public Relation">Public Relation</ion-option>
+        <ion-option value="Social Media Assistant">Social Media Assistant</ion-option>
+        <ion-option value="Brand Manager">Brand Manager</ion-option>
+        
+      </ion-select>
+    </ion-item>
+
+    <button (click)="SearchbyDistrictAndCategory()" ion-button style="background-color: white; color: red;border-radius: 0px;"  >Submit</button>
+    </ion-card-content>
+  </ion-card>
+  <ion-label></ion-label>
+  
+
+  <ion-label  style="text-align:center; font-size: 19px; font-family: 'BwNista';">
+    We Can Help You <b style="color: rgb(63, 180, 226);"> Get a Job</b></ion-label>
+    <ion-label style="text-align:center; font-size: 17px; font-family: 'BwNista'; margin-top: -7px;">
+    If the job is online, you will find it on TIMEBIZ
+    </ion-label>
+    <ion-card no-padding color="primary" 
+    style="border-top-right-radius: 19px;border-bottom-left-radius: 19px; text-align: center; margin-top: 32px;">
+      <ion-card-header>
+        <ion-icon  class="menucolorhome" name="home">
+
+        </ion-icon>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label color="danger" style="font-size: 22px;text-align: center;font-family: 'BwNistaExtraBold';margin-top: -10px;">Jobs by Category</ion-label>
+        <p color="danger" style="font-size: 17px;text-align: center;font-family: 'BwNista';margin-top: -5px; color:rgb(63, 180, 226);">
+          Search jobs by its Category. For eg. Information Technology, BPO etc.
+        </p>
+
+          <ion-grid no-padding>
+            <ion-row>
+              <ion-col col-9 no-padding>
+                
+                <ion-item class="ion-no-padding item">
+                <ion-select [(ngModel)] = "this.searchOnlyCategory" class="item-inner" placeholder="Select Job"  >
+            
+                  <ion-option value="Chief">Chief</ion-option>
+                  <ion-option value="Overseer">Overseer</ion-option>
+                  <ion-option value="Marketing">Marketing</ion-option>
+                  <ion-option value="Marketing Manager">Marketing Manager</ion-option>
+                  <ion-option value="Markerting Specialist">Markerting Specialist</ion-option>
+                  <ion-option value="Marketing Director">Marketing Director</ion-option>
+                  <ion-option value="Marketing Research Analyst">Marketing Research Analyst</ion-option>
+                  <ion-option value="Marketing Communication Manager">Marketing Communication Manager</ion-option>
+                  <ion-option value="Marketing Consultant">Marketing Consultant</ion-option>
+                  <ion-option value="Product Manager">Product Manager</ion-option>
+                  <ion-option value="Public Relation">Public Relation</ion-option>
+                  <ion-option value="Social Media Assistant">Social Media Assistant</ion-option>
+                  <ion-option value="Brand Manager">Brand Manager</ion-option>
+                  <ion-option value="SEO Manager">SEO Manager</ion-option>
+                  <ion-option value="Content Marketing Manager">Content Marketing Manager</ion-option>
+                  <ion-option value="Copy Writer">Copy Writer</ion-option>
+                  <ion-option value="Media Buyer">Media Buyer</ion-option>
+                  <ion-option value="Digital Marketing Manager">Digital Marketing Manager</ion-option>
+                  <ion-option value="Information Technology">Information Technology</ion-option>
+                  <ion-option value="Computer Scientist">Computer Scientist</ion-option>
+                  <ion-option value="IT Professional">IT Professional</ion-option>
+                  <ion-option value="Marketing Consultant">Marketing Consultant</ion-option>
+                  <ion-option value="Product Manager">Product Manager</ion-option>
+                  <ion-option value="Public Relation">Public Relation</ion-option>
+                  <ion-option value="Social Media Assistant">Social Media Assistant</ion-option>
+                  <ion-option value="Brand Manager">Brand Manager</ion-option>
+                  
+                </ion-select>
+              </ion-item>
+              </ion-col>
+              <ion-col col-3 no-padding>
+                <button ion-button color="danger" (click)="SearchbyCompany()" 
+                style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; margin-top: -1px;" >
+                GO</button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+          
+        
+      </ion-card-content>
+    
+    </ion-card>
+
+
+    <ion-card no-padding color="primary" 
+    style="border-top-right-radius: 19px;border-bottom-left-radius: 19px; text-align: center;margin-top: 20px;">
+      <ion-card-header>
+        <ion-icon  class="menucolorhome" name="home">
+
+        </ion-icon>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label color="danger" style="font-size: 22px;text-align: center;font-family: 'BwNistaExtraBold';margin-top: -10px;">Jobs by Company</ion-label>
+        <p color="danger" style="font-size: 17px;text-align: center;font-family: 'BwNista';margin-top: -5px; color:rgb(63, 180, 226);">
+          Have a specific company in mind. Search for jobs as per company.
+        </p>
+
+          <ion-grid no-padding>
+            <ion-row>
+              <ion-col col-9 no-padding>
+                <ion-item class="ion-no-padding item">
+                <ion-select [(ngModel)] = "this.searchCompany" class="item-inner" placeholder="Select Company"  >
+            
+                  <!-- <ion-option value="Alappuzha">Microsoft</ion-option>
+                  <ion-option value="blonde">Google</ion-option>
+                  <ion-option value="black">Amazon</ion-option> -->
+                  <div *ngFor="let field of this.companyvalues">
+                    <ion-option value="{{field.Companyname}}">{{field.Companyname}}
+                    </ion-option>
+                  </div>
+                  
+                  
+                </ion-select>
+              </ion-item>
+              </ion-col>
+              <ion-col col-3 no-padding>
+                <button ion-button color="danger" 
+                style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; margin-top: -1px;" >
+                GO</button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+          
+        
+      </ion-card-content>
+    
+    </ion-card>
+
+    <ion-card no-padding color="primary" 
+    style="border-top-right-radius: 19px;border-bottom-left-radius: 19px; text-align: center;margin-top: 30px;">
+      <ion-card-header>
+        <ion-icon  class="menucolorhome" name="home">
+
+        </ion-icon>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label color="danger" style="font-size: 22px;text-align: center;font-family: 'BwNistaExtraBold';margin-top: -10px;">Jobs by Skill</ion-label>
+        <p color="danger" style="font-size: 17px;text-align: center;font-family: 'BwNista';margin-top: -5px; color:rgb(63, 180, 226);">
+          Have a specific skill. Look for jobs as per skills.
+        </p>
+
+          <ion-grid no-padding>
+            <ion-row>
+              <ion-col col-9 no-padding>
+                <ion-item class="ion-no-padding item">
+                <ion-select class="item-inner" placeholder="Select Skill"  >
+            
+                  <ion-option value="Alappuzha">C#</ion-option>
+                  <ion-option value="blonde">Java</ion-option>
+                  <ion-option value="black">Python</ion-option>
+                  <ion-option value="black">Graphic Designer</ion-option>
+                  
+                  
+                </ion-select>
+              </ion-item>
+              </ion-col>
+              <ion-col col-3 no-padding>
+                <button ion-button color="danger" 
+                style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; margin-top: -1px;" >
+                GO</button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+          
+        
+      </ion-card-content>
+    
+    </ion-card>
+
+
+    <ion-card no-padding color="primary" 
+    style="border-top-right-radius: 19px;border-bottom-left-radius: 19px; text-align: center;margin-top: 30px;">
+      <ion-card-header>
+        <ion-icon  class="menucolorhome" name="home">
+
+        </ion-icon>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label color="danger" style="font-size: 22px;text-align: center;font-family: 'BwNistaExtraBold';margin-top: -10px;">Jobs by Keyword</ion-label>
+        <p color="danger" style="font-size: 17px;text-align: center;font-family: 'BwNista';margin-top: -5px; color:rgb(63, 180, 226);">
+          Look for jobs as per keyword like Tally, MS Word, etc.
+        </p>
+
+          <ion-grid no-padding>
+            <ion-row>
+              <ion-col col-9 no-padding>
+                <ion-item class="ion-no-padding item">
+                <ion-input type="text"></ion-input>
+              </ion-item>
+              </ion-col>
+              <ion-col col-3 no-padding>
+                <button ion-button color="danger"  (click)="SearchbyKeywords()"
+                style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; margin-top: -1px;" >
+                GO</button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+          
+        
+      </ion-card-content>
+    
+    </ion-card>
+
+    
+
+  
 </ion-content>
